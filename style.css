@@ -1,10 +1,12 @@
 :root {
-    --primary: #FF7EB3;
-    --secondary: #FF758C;
-    --bg-color: #0f172a;
-    --text-light: #f8fafc;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --primary: #101c4e; /* ZEN Navy */
+    --secondary: #f02575; /* Web出願 Magenta/Pink */
+    --accent: #11d4ff; /* Light Cyan */
+    --bg-color: #f8fbff;
+    --text-dark: #1e293b;
+    --text-gray: #475569;
+    --card-bg: #ffffff;
+    --glass-border: rgba(16, 28, 78, 0.08);
 }
 
 * {
@@ -16,7 +18,7 @@
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: var(--bg-color);
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -29,6 +31,7 @@ body {
     position: relative;
     text-align: center;
     padding: 2rem;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -37,14 +40,16 @@ body {
 }
 
 .badge {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 1px;
     display: inline-block;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(16, 28, 78, 0.2);
 }
 
 h1 {
@@ -52,44 +57,45 @@ h1 {
     font-weight: 900;
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(to right, #fff, #cbd5e1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 3rem;
-    color: #94a3b8;
+    color: var(--text-gray);
 }
 
+/* Pink button like the Web出願 button */
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 1rem 2.8rem;
+    background: linear-gradient(135deg, #ff4081, #f02575);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(240, 37, 117, 0.3);
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 117, 140, 0.4);
+    box-shadow: 0 12px 25px rgba(240, 37, 117, 0.4);
 }
 
-/* Glassmorphism Sections */
+/* Clean White Sections */
 .glass-section {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    background: var(--card-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 4rem 2rem;
     margin: 4rem auto;
     max-width: 1000px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 10;
 }
 
 .glass-section h2 {
@@ -97,6 +103,12 @@ h1 {
     margin-bottom: 2rem;
     text-align: center;
     color: var(--primary);
+}
+
+.glass-section > p {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.1rem;
 }
 
 /* Cards Layout */
@@ -107,22 +119,28 @@ h1 {
 }
 
 .card {
-    background: rgba(255,255,255,0.02);
-    padding: 2rem;
+    background: #ffffff;
+    padding: 2.5rem 2rem;
     border-radius: 15px;
     border: 1px solid var(--glass-border);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.05);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(16, 28, 78, 0.08);
+    border-color: var(--accent);
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--primary);
+}
+
+.card p {
+    color: var(--text-gray);
 }
 
 /* Timeline specific */
@@ -130,6 +148,7 @@ h1 {
     list-style: none;
     position: relative;
     margin-top: 2rem;
+    padding-left: 10px;
 }
 
 .timeline::before {
@@ -139,40 +158,51 @@ h1 {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--glass-border);
+    background: #e2e8f0;
 }
 
 .timeline li {
     position: relative;
-    padding-left: 60px;
+    padding-left: 50px;
     margin-bottom: 3rem;
 }
 
 .timeline li::before {
     content: '';
     position: absolute;
-    left: 14px;
+    left: 12px;
     top: 5px;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    background: var(--primary);
-    box-shadow: 0 0 10px var(--primary);
+    background: var(--accent);
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent);
 }
 
 .date {
     font-weight: bold;
     color: var(--secondary);
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.timeline .content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.timeline .content p {
+    color: var(--text-gray);
 }
 
 footer {
     text-align: center;
     padding: 3rem;
-    color: #475569;
+    color: var(--text-gray);
 }
 
-/* Background Animated Circles */
+/* Background Animated Abstract Geometric Shapes for ZEN vibe */
 .circles {
     position: absolute;
     top: 0;
@@ -186,32 +216,32 @@ footer {
 
 .circle {
     position: absolute;
+    filter: blur(100px);
+    opacity: 0.6;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.5;
 }
 
 .circle-1 {
     top: -10%;
     left: -10%;
-    width: 500px;
-    height: 500px;
-    background: var(--primary);
-    animation: float 10s infinite alternate;
+    width: 600px;
+    height: 600px;
+    background: var(--accent);
+    animation: float 12s infinite alternate;
 }
 
 .circle-2 {
-    bottom: -20%;
+    bottom: 0;
     right: -10%;
-    width: 600px;
-    height: 600px;
-    background: #4F46E5;
-    animation: float 12s infinite alternate reverse;
+    width: 800px;
+    height: 800px;
+    background: #e0e7ff;
+    animation: float 15s infinite alternate reverse;
 }
 
 @keyframes float {
     0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    100% { transform: translate(60px, 60px); }
 }
 
 /* Animations */
