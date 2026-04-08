@@ -1,7 +1,7 @@
 :root {
-    --primary: #101c4e; /* ZEN Navy */
-    --secondary: #f02575; /* Web出願 Magenta/Pink */
-    --accent: #11d4ff; /* Light Cyan */
+    --primary: #101c4e;
+    --secondary: #f02575;
+    --accent: #11d4ff;
     --bg-color: #f8fbff;
     --text-dark: #1e293b;
     --text-gray: #475569;
@@ -19,10 +19,11 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.8;
     overflow-x: hidden;
 }
 
+/* ===== HERO ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -44,7 +45,7 @@ body {
     color: #fff;
     padding: 0.5rem 1.2rem;
     border-radius: 50px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: bold;
     letter-spacing: 1px;
     display: inline-block;
@@ -61,12 +62,11 @@ h1 {
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 3rem;
     color: var(--text-gray);
 }
 
-/* Pink button like the Web出願 button */
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -75,7 +75,7 @@ h1 {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 20px rgba(240, 37, 117, 0.3);
 }
@@ -85,13 +85,13 @@ h1 {
     box-shadow: 0 12px 25px rgba(240, 37, 117, 0.4);
 }
 
-/* Clean White Sections */
+/* ===== SECTIONS ===== */
 .glass-section {
     background: var(--card-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 4rem 2rem;
-    margin: 4rem auto;
+    padding: 3.5rem 2.5rem;
+    margin: 3rem auto;
     max-width: 1000px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
     position: relative;
@@ -99,8 +99,8 @@ h1 {
 }
 
 .glass-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     color: var(--primary);
 }
@@ -108,19 +108,106 @@ h1 {
 .glass-section > p {
     text-align: center;
     color: var(--text-gray);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Cards Layout */
+.section-desc {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+/* ===== YEAR BLOCKS ===== */
+.year-block {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary);
+}
+
+.year-title {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.year-num {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.2rem 0.8rem;
+    border-radius: 8px;
+    margin-right: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.year-subtitle {
+    color: var(--secondary);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.year-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.year-block ul li {
+    padding: 0.3rem 0 0.3rem 1.5rem;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.year-block ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* ===== SCHEDULE TABLE ===== */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.schedule-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.schedule-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr:hover td {
+    background: rgba(16, 28, 78, 0.03);
+}
+
+/* ===== CARDS ===== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 .card {
     background: #ffffff;
-    padding: 2.5rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 15px;
     border: 1px solid var(--glass-border);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -134,20 +221,21 @@ h1 {
 }
 
 .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
     color: var(--primary);
 }
 
 .card p {
     color: var(--text-gray);
+    font-size: 0.95rem;
 }
 
-/* Timeline specific */
+/* ===== TIMELINE ===== */
 .timeline {
     list-style: none;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     padding-left: 10px;
 }
 
@@ -164,7 +252,7 @@ h1 {
 .timeline li {
     position: relative;
     padding-left: 50px;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .timeline li::before {
@@ -183,26 +271,60 @@ h1 {
 .date {
     font-weight: bold;
     color: var(--secondary);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
 }
 
 .timeline .content h3 {
     color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .timeline .content p {
     color: var(--text-gray);
+    font-size: 0.95rem;
 }
 
+/* ===== RESOURCE LINKS ===== */
+.resource-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.resource-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #101c4e, #1e3a8a);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(16, 28, 78, 0.2);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(16, 28, 78, 0.3);
+}
+
+.resource-icon {
+    font-size: 2rem;
+}
+
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
     padding: 3rem;
     color: var(--text-gray);
 }
 
-/* Background Animated Abstract Geometric Shapes for ZEN vibe */
+/* ===== BACKGROUND CIRCLES ===== */
 .circles {
     position: absolute;
     top: 0;
@@ -244,7 +366,7 @@ footer {
     100% { transform: translate(60px, 60px); }
 }
 
-/* Animations */
+/* ===== ANIMATIONS ===== */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s forwards ease-out;
@@ -256,6 +378,7 @@ footer {
 @keyframes fadeIn {
     to { opacity: 1; transform: translateY(0); }
 }
+
 .hero-content h1, .hero-content p, .hero-content a {
     transform: translateY(20px);
 }
@@ -269,4 +392,12 @@ footer {
 .slide-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.1rem; }
+    .glass-section { margin: 2rem 1rem; padding: 2rem 1.2rem; }
+    .year-block { padding: 1.2rem; }
 }
