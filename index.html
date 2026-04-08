@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEN University Scholarship Proposal | Momo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">ZEN University Scholarship</span>
+            <h1 class="fade-in">私の挑戦と、世界への第一歩</h1>
+            <p class="fade-in delay-1">事業計画 ＆ 韓国活動計画書</p>
+            <a href="#business-plan" class="btn fade-in delay-2">計画を見る</a>
+        </div>
+        <div class="circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="vision" class="glass-section slide-up">
+            <h2>Vision - 実現したい未来</h2>
+            <p>※ここに、ももちゃんが解決したい課題や、将来の大きな夢（ビジョン）を書きます。テキストは後で変更できます！</p>
+        </section>
+
+        <section id="business-plan" class="glass-section slide-up">
+            <h2>Business Plan - 事業計画</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>課題</h3>
+                    <p>※現在の社会課題や、対象者の悩みを書きます。</p>
+                </div>
+                <div class="card">
+                    <h3>解決策</h3>
+                    <p>※どのようなサービスやプロダクトで解決するかを書きます。</p>
+                </div>
+                <div class="card">
+                    <h3>収益モデル</h3>
+                    <p>※どのようにお金を生み出し、持続させるかを書きます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="korea-plan" class="glass-section slide-up">
+            <h2>Action Plan in Korea - 韓国での活動計画書</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="date">Day 1 - Day 3</div>
+                    <div class="content">
+                        <h3>現地調査とネットワーキング</h3>
+                        <p>※韓国の◯◯市場を視察し、現地の起業家と交流する。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">Day 4 - Day 7</div>
+                    <div class="content">
+                        <h3>プロトタイプ検証</h3>
+                        <p>※現地の学生に向けてアンケート調査を実施する。</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Momo. ZEN University Scholarship Proposal.</p>
+    </footer>
+
+    <script>
+        // Simple scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.slide-up').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
