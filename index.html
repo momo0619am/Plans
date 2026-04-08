@@ -8,12 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+        <div class="nav-brand">余市のばあちゃんち</div>
+        <div class="nav-links">
+            <a href="#problem">背景</a>
+            <a href="#why-yoichi">なぜ余市</a>
+            <a href="#business-model">事業形態</a>
+            <a href="#korea-plan">韓国研修</a>
+            <a href="#roadmap">ロードマップ</a>
+        </div>
+    </nav>
+
+    <!-- ヒーロー -->
     <header class="hero">
         <div class="hero-content">
             <span class="badge">ZEN University Scholarship</span>
             <h1 class="fade-in">余市のばあちゃんち</h1>
             <p class="subtitle fade-in delay-1">余市に挑戦と経験の場を作ろう</p>
-            <p class="fade-in delay-1">祖父母の家を活用し、余市の学生が挑戦＆活動できる場を創造する</p>
+            <p class="fade-in delay-1">祖父母の家を活用し、地方の学生が挑戦＆活動できる「寺子屋」を創造する</p>
             <a href="#problem" class="btn fade-in delay-2">事業計画を見る</a>
         </div>
         <div class="circles">
@@ -23,16 +37,14 @@
     </header>
 
     <main>
-        <!-- 問いかけ -->
+
+        <!-- ===== 問い ===== -->
         <section id="problem" class="glass-section slide-up">
             <h2>問</h2>
             <div class="question-block">
-                <p>余市に住む私の祖父母は介護が必要な年齢に近づいており、<br>
-                今後この家に住み続けることは難しくなるかもしれません。</p>
-                <p>しかし、田舎の土地は需要もなく手放すだけでお金がかかる。<br>
-                <strong>この土地をただ手放すのではなく、<br>
-                思い出の家を生かすその方向にこの土地を、課題を解決する<br>
-                「何か」に変えられないか？</strong></p>
+                <p>余市に住む私の祖父母は介護が必要な年齢に近づいており、今後この家に住み続けることは難しくなるかもしれません。</p>
+                <p>しかし、田舎の土地は需要もなく手放すだけでお金がかかる。</p>
+                <p><strong>この土地をただ手放すのではなく、思い出の家を生かし、課題を解決する「何か」に変えられないか？</strong></p>
             </div>
             <div class="answer-block">
                 <h3>答：余市に挑戦と経験の場を作ろう</h3>
@@ -40,39 +52,37 @@
                     <tr><th>名称</th><td>余市のばあちゃんち</td></tr>
                     <tr><th>場所</th><td>余市の祖父母の家</td></tr>
                     <tr><th>資源</th><td>家、畑、ガレージ</td></tr>
+                    <tr><th>コンセプト</th><td>過ごし方は無限大 — 学び・体験・交流が自然発生する「寺子屋」</td></tr>
                 </table>
             </div>
         </section>
 
-        <!-- 過ごし方は無限大 -->
-        <section class="glass-section slide-up">
-            <h2>過ごし方は無限大</h2>
-            <p class="section-desc">祖父母の家の空間を活かし、あらゆる学びと体験の場として活用します。</p>
-        </section>
+        <!-- ===== 教育格差データ ===== -->
+        <section id="education-gap" class="glass-section slide-up">
+            <h2>なぜ町村部に若者の活動拠点が必要なのか</h2>
+            <p class="section-desc">全国学力テストのデータが示す、地方の学生が抱える現実</p>
 
-        <!-- なぜ余市？ -->
-        <section id="why-yoichi" class="glass-section slide-up">
-            <h2>なぜ余市町？</h2>
-            <div class="why-cards">
-                <div class="why-card">
-                    <span class="why-icon">🏡</span>
-                    <h3>故郷</h3>
-                </div>
-                <div class="why-card">
-                    <span class="why-icon">🏔️</span>
-                    <h3>海と山</h3>
-                </div>
-                <div class="why-card">
-                    <span class="why-icon">🍎</span>
-                    <h3>果樹園</h3>
-                </div>
+            <div class="data-highlight">
+                <h3>全国学力・学習状況調査（文部科学省）の分析結果</h3>
+                <p>政令指定都市など大都市圏の平均正答率が、市部・町村部よりやや高いことが確認されています。</p>
+                <p class="source">出典: <a href="https://firstdonate.jp/educational-disparity-2025/" target="_blank">firstdonate.jp「教育格差2025」</a></p>
             </div>
-            <p class="tagline">Think global, act local に基づき故郷からスタート</p>
-        </section>
 
-        <!-- 地方の学生の現実 -->
-        <section id="reality" class="glass-section slide-up">
-            <h2>地方の学生の現実</h2>
+            <div class="data-table-wrapper">
+                <h3>ベネッセ教育総合研究所の調査データ（小中学生）</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>地域区分</th><th>平均正答数</th><th>平均正答率</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row"><td>大都市圏</td><td>11.6問</td><td>59.9％</td></tr>
+                        <tr><td>市部</td><td>10.5問</td><td>54.8％</td></tr>
+                        <tr><td>町村部</td><td>10.6問</td><td>57.5％</td></tr>
+                    </tbody>
+                </table>
+                <p class="source">出典: <a href="https://benesse.jp/berd/berd/center/open/report/kyoiku_kakusa/2008/pdf/data_03.pdf" target="_blank">ベネッセ教育総合研究所「学力の地域格差」PDF</a></p>
+            </div>
+
             <div class="reality-grid">
                 <div class="reality-box reality-problem">
                     <h3>地方の学生の現実</h3>
@@ -87,21 +97,62 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="solution-callout">
+                <p>💡 この格差を埋めるために、<strong>町村部に若者が自然と集まり、挑戦し、視野を広げられる拠点</strong>が必要です。それが「余市のばあちゃんち」です。</p>
+            </div>
         </section>
 
-        <!-- 事業形態 -->
+        <!-- ===== なぜ余市 ===== -->
+        <section id="why-yoichi" class="glass-section slide-up">
+            <h2>なぜ余市町？</h2>
+
+            <div class="why-main-reason">
+                <h3>🏡 私の故郷だから</h3>
+                <p>余市は私が生まれ育った町です。<strong>慣れ親しんだ土地でスモールスタートし、徐々に規模感を大きくしていきたい。</strong>まずは自分の原点であるこの場所から、Think Global, Act Local の精神で挑戦を始めます。</p>
+            </div>
+
+            <h3 class="sub-heading">余市町の唯一無二の魅力 — 差別化ポイント</h3>
+            <div class="charm-grid">
+                <div class="charm-card"><span class="charm-icon">🏔️</span><h4>山</h4><p>豊かな山岳景観と自然体験</p></div>
+                <div class="charm-card"><span class="charm-icon">🌊</span><h4>海</h4><p>日本海に面した漁業の町</p></div>
+                <div class="charm-card"><span class="charm-icon">🍎</span><h4>果樹園</h4><p>りんごのほっぺの生産地</p></div>
+                <div class="charm-card"><span class="charm-icon">🏞️</span><h4>川</h4><p>余市川の豊かな水辺環境</p></div>
+                <div class="charm-card"><span class="charm-icon">🍷</span><h4>ワイン文化</h4><p>国内有数のワイナリー地域</p></div>
+                <div class="charm-card"><span class="charm-icon">📺</span><h4>マッサンの聖地</h4><p>NHK朝ドラ「マッサン」の舞台</p></div>
+                <div class="charm-card"><span class="charm-icon">🚃</span><h4>小樽が近い</h4><p>観光都市・小樽へのアクセス良好</p></div>
+                <div class="charm-card"><span class="charm-icon">🦌</span><h4>アイヌ文化</h4><p>北海道の先住民族の歴史と文化</p></div>
+            </div>
+
+            <div class="fieldwork-block">
+                <h3>📋 フィールドワーク × 課外活動</h3>
+                <p>これらの余市町の魅力を、学生たちが<strong>フィールドワークで調べ、発表・発信する機会を課外活動として提供</strong>します。地域を深く知ることが、学生の視野を広げ、自信と発信力を育てます。</p>
+            </div>
+
+            <div class="fieldwork-block ainu-block">
+                <h3>🦌 アイヌ文化教育プログラム</h3>
+                <p>北海道はアイヌ文化がある土地です。<strong>アイヌ文化について学べる課外活動</strong>も「余市のばあちゃんち」事業の一環として学生たちに提供します。先住民族の歴史・言語・工芸・自然観を学ぶことで、多文化理解と地域アイデンティティを育みます。</p>
+            </div>
+
+            <div class="pre-activity-block">
+                <h3>📸 プレ活動：Instagram発信（2026年〜）</h3>
+                <p>今年から、<strong>余市町の良さを私のInstagramでインタビュー＆施設訪問してリール動画にして発信</strong>する活動をスタートします。ワイナリー、カフェ、地元の人々をインタビューし、余市の魅力を全国に届けます。これが本格的なフィールドワーク活動のプレ（前段階）となります。</p>
+            </div>
+        </section>
+
+        <!-- ===== 事業形態 ===== -->
         <section id="business-model" class="glass-section slide-up">
             <h2>事業形態</h2>
             <p class="section-desc">合同会社と一般社団法人のハイブリッドモデル</p>
             <div class="model-grid">
                 <div class="model-card">
-                    <h3>合同会社</h3>
+                    <h3>合同会社（収益事業）</h3>
                     <p><strong>事業内容：</strong>農業・飲食店・ワークショップ</p>
-                    <p><strong>対象：</strong>余市町の住民特に高齢者・観光客</p>
+                    <p><strong>対象：</strong>余市町の住民（特に高齢者）・観光客</p>
                     <p><strong>資金：</strong>事業の利益を社団法人の経費として使う</p>
                 </div>
                 <div class="model-card">
-                    <h3>一般社団法人</h3>
+                    <h3>一般社団法人（公益事業）</h3>
                     <p><strong>事業内容：</strong>学習塾・居場所づくり・シェアハウス・ゼミ・子ども食堂</p>
                     <p><strong>対象：</strong>余市町に住む学生</p>
                     <p><strong>資金：</strong>国の補助金、クラウドファンディング、休眠預金等活用法、小規模事業者給付金</p>
@@ -109,7 +160,94 @@
             </div>
         </section>
 
-        <!-- 4ヶ年ロードマップ -->
+        <!-- ===== 韓国自主研修 ===== -->
+        <section id="korea-plan" class="glass-section slide-up">
+            <h2>🇰🇷 韓国自主研修 活動計画書</h2>
+            <p class="section-desc">1年生の10月〜12月に実施。「余市のばあちゃんち」の空間設計とコミュニティ運営のヒントを得るための海外研修。</p>
+
+            <div class="korea-purpose">
+                <h3>研修の目的</h3>
+                <p>若者が自然と集まる「寺子屋」を作る上で参考になる、韓国の自習室・コミュニティスペース・若者拠点を現地視察し、空間設計・運営モデル・コミュニティ形成のノウハウを学ぶ。</p>
+            </div>
+
+            <h3 class="sub-heading">視察予定スポット（10カ所）</h3>
+
+            <div class="korea-spots">
+                <div class="spot-card">
+                    <span class="spot-num">01</span>
+                    <h4>ユースゾーン（無重力地帯）<span class="spot-city">ソウル</span></h4>
+                    <p>ソウル市がつくった「若者が重力から解放されて自由に過ごせる場」。コワーキング、イベント、学びのプログラムが混ざり合い、「居場所＋仕事場＋遊び場」を体感できる。</p>
+                    <a href="https://www.coworker.com/south-korea/seoul/youth-zone" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">02</span>
+                    <h4>青年無料自習スペース（Plus+ Zone）<span class="spot-city">ソウル</span></h4>
+                    <p>19〜39歳対象の無料自習スペース。カウンター席、大テーブル、階段状ベンチなど、「静かな自習」と「ゆるい交流」が両立する設計。電源・Wi-Fi完備、会議室やメディアスタジオも併設。</p>
+                    <a href="https://koreajoongangdaily.joins.com/news/2025-04-29/national/kcampus/Study-sip-and-save-Inside-Seouls-growing-network-of-free-youth-study-spaces/2296095" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">03</span>
+                    <h4>中区青少年センター「スマートスタディルーム」<span class="spot-city">ソウル・中区</span></h4>
+                    <p>区立ユースセンターにある30席規模の無料自習室。体育館、多目的ホール、屋上デッキもあり、「勉強の場」と「体を動かす場」「文化プログラム」の複合設計。</p>
+                    <a href="https://cm.asiae.co.kr/en/article/2026012708593309877" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">04</span>
+                    <h4>NCソフト × 城南市「Projectory」<span class="spot-city">城南市</span></h4>
+                    <p>ゲーム会社と自治体が協働でつくった「プロジェクト型の創作ラボ」。木工やコーディングなどを自分のプロジェクトとして進められる場。自治体と企業が共同で若者の創作・探究を支えるモデル。</p>
+                    <a href="https://cm.asiae.co.kr/en/article/2026011307005407884" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">05</span>
+                    <h4>ソウル・アーティスツ・プラットフォーム New & Young<span class="spot-city">ソウル</span></h4>
+                    <p>若手アーティストのための実験拠点。サウンド実験室、練習室、展示・公演ホールを備え、ジャンルや年齢の境界を越えたコラボが生まれる設計。</p>
+                    <a href="https://www.sfac.or.kr/site/SFAC_ENG/05/10521000000002021080910.jsp" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">06</span>
+                    <h4>ムレ・アーツ・ビレッジ（文来創作村）<span class="spot-city">ソウル</span></h4>
+                    <p>元・工場地帯を、アーティストのスタジオやギャラリー、カフェが集まるエリアに転換。路地や倉庫そのものがコミュニティ空間になっている「まち全体がアートスペース」。</p>
+                    <a href="https://performingarts.jpf.go.jp/en/article/6719/" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">07</span>
+                    <h4>「Thoughtful Place: Come and Go」<span class="spot-city">釜山</span></h4>
+                    <p>区役所ロビーや地下をリノベーションした子ども・若者向け複合文化スペース。図書コーナー、モーション認識の遊び場、ライブスケッチゾーン、屋外ラウンジなど。公共施設を「遊びと学びのサードプレイス」に変える事例。</p>
+                    <a href="https://korea.stripes.com/travel/busan-child-friendly-cultural-space.html" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">08</span>
+                    <h4>釜山 Youth Community Program<span class="spot-city">釜山</span></h4>
+                    <p>釜山市が50の若者コミュニティを支援するプログラム。単なる場所ではなく「コミュニティとセットで場をつくる」政策設計。環境、テック、メンタリングなど多様なテーマ。</p>
+                    <a href="https://www.busan.go.kr/eng/ai-translated-press-releases/1675412" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">09</span>
+                    <h4>「心のコンビニ」コミュニティカフェ<span class="spot-city">ソウル</span></h4>
+                    <p>「孤独対策」として生まれたカフェ型コミュニティスペース。カウンセリングやボランティア参加でポイントが貯まる仕組み。静かに座っているだけの利用も歓迎する「ゆるさ」が若者の心理的ハードルを下げる。</p>
+                    <a href="https://www.christianitytoday.com/2025/10/korea-seoul-loneliness-convenience-stores-community-cafe/" target="_blank">🔗 詳細を見る</a>
+                </div>
+                <div class="spot-card">
+                    <span class="spot-num">10</span>
+                    <h4>クリエイティブ系コワーキングスペース（Spaces）<span class="spot-city">ソウル</span></h4>
+                    <p>デザイン性の高いコワーキングスペース。「集中作業ゾーン」「カフェ的ラウンジ」「イベントゾーン」をうまく切り替えるレイアウトが、寺子屋の空間設計の参考になる。</p>
+                    <a href="https://www.spacesworks.com/en/kr/seoul/seoul/coworking" target="_blank">🔗 詳細を見る</a>
+                </div>
+            </div>
+
+            <div class="korea-viewpoints">
+                <h3>視察の5つの観点</h3>
+                <div class="viewpoint-grid">
+                    <div class="vp-item"><strong>🚪 入口の雰囲気</strong><br>入りやすさ、看板や言葉のトーン</div>
+                    <div class="vp-item"><strong>🗺️ ゾーニング</strong><br>静かな自習ゾーンと会話ゾーンの分け方</div>
+                    <div class="vp-item"><strong>📋 利用ルール</strong><br>無料/有料、予約制、運営主体</div>
+                    <div class="vp-item"><strong>👥 コミュニティ運営</strong><br>スタッフの役割、イベントの頻度と内容</div>
+                    <div class="vp-item"><strong>🏛️ 公共×民間連携</strong><br>公的スペースのリノベ手法</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ロードマップ ===== -->
         <section id="roadmap" class="glass-section slide-up">
             <h2>どう実現する？ ー 4ヶ年ロードマップ</h2>
 
@@ -117,13 +255,13 @@
                 <div class="roadmap-step">
                     <div class="step-dot active"></div>
                     <h4>大学1年生</h4>
-                    <p>起業の情報収集<br>関連スキルへの参加<br>既存のコミュニティリサーチ</p>
+                    <p>起業の情報収集<br>関連スキル取得<br>コミュニティリサーチ</p>
                 </div>
                 <div class="roadmap-line"></div>
                 <div class="roadmap-step">
                     <div class="step-dot"></div>
                     <h4>大学2年生</h4>
-                    <p>単発イベントを札幌で実施<br>住居の保全活動をスタート</p>
+                    <p>単発イベントを札幌で実施<br>住居の保全活動スタート</p>
                 </div>
                 <div class="roadmap-line"></div>
                 <div class="roadmap-step">
@@ -135,51 +273,61 @@
                 <div class="roadmap-step">
                     <div class="step-dot"></div>
                     <h4>大学4年生</h4>
-                    <p>運営</p>
+                    <p>法人化<br>本格運営</p>
                 </div>
+            </div>
+
+            <!-- 1年生スケジュール -->
+            <div class="year-detail">
+                <h3>1年生の活動スケジュール</h3>
+                <p class="year-subtitle">世界で学び、地元で試し、発信で磨く。起業前の実験の一年にする！</p>
+                <table class="schedule-table">
+                    <thead><tr><th>期限</th><th>活動内容</th></tr></thead>
+                    <tbody>
+                        <tr><td>4月〜6月</td><td>運転免許取得 / 既存のコミュニティ研究</td></tr>
+                        <tr><td>7月〜9月</td><td>簿記3級取得</td></tr>
+                        <tr><td>10月〜12月</td><td>韓国自主研修 / FP3級取得</td></tr>
+                        <tr><td>1月〜3月</td><td>シリコンバレー留学 / 学びを発信</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--  2年生 -->
+            <div class="year-detail">
+                <h3>2年生 ー 収入の柱を立てながら「お金を稼ぐこと」を学ぶ</h3>
+                <ul>
+                    <li>FP2級・簿記2級取得</li>
+                    <li>SNS広告収入、ココナラ、塾、ノート記事、会計バイトなど <strong>6本柱</strong> で生計を立てる</li>
+                    <li>任意団体として立ち上げ、学生団体にする</li>
+                    <li>SNS1000人を目指す、単発イベントまで繋げる</li>
+                </ul>
+            </div>
+
+            <!-- 3年生 -->
+            <div class="year-detail">
+                <h3>3年生 ー 起業するために小さく事業をスタート</h3>
+                <ul>
+                    <li>余市町の中学生・高校生向けオンライン進路相談</li>
+                    <li>「余市から世界へ」発信プロジェクト</li>
+                    <li>子ども向け英語・留学体験ワークショップ（出張型）</li>
+                    <li>教育格差調査レポートの発信</li>
+                    <li>高校生向けビジネスアイデアコンテスト（オンライン開催）</li>
+                    <li>マーケティングか営業のインターンに入る</li>
+                </ul>
+            </div>
+
+            <!-- 4年生 -->
+            <div class="year-detail">
+                <h3>4年生 ー 法人化・収益化し事業を拡大！</h3>
+                <ul>
+                    <li>余市から世界へプロジェクトを収益化</li>
+                    <li>ワークショップを収益化</li>
+                    <li>任意団体から一般社団法人やNPO法人にする</li>
+                </ul>
             </div>
         </section>
 
-        <!-- 1年生の詳細スケジュール -->
-        <section id="year1" class="glass-section slide-up">
-            <h2>1年生の活動スケジュール</h2>
-            <p class="section-desc">世界で学び、地元で試し、発信で磨く。起業前の実験の一年にする！</p>
-            <table class="schedule-table">
-                <thead>
-                    <tr><th>期限</th><th>活動内容</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>4月〜6月</td><td>運転免許取得 / 既存のコミュニティ研究</td></tr>
-                    <tr><td>7月〜9月</td><td>簿記3級取得</td></tr>
-                    <tr><td>10月〜12月</td><td>韓国自主研修 / FP3級取得</td></tr>
-                    <tr><td>1月〜3月</td><td>シリコンバレー留学 / 学びを発信</td></tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- 韓国自主研修 -->
-        <section id="korea-plan" class="glass-section slide-up">
-            <h2>🇰🇷 韓国自主研修 計画</h2>
-            <p class="section-desc">1年生の10月〜12月に実施予定。事業の視野を広げるための海外研修。</p>
-            <ul class="timeline">
-                <li>
-                    <div class="date">フェーズ1</div>
-                    <div class="content">
-                        <h3>現地調査とネットワーキング</h3>
-                        <p>韓国の教育・コミュニティ事業の先進事例を視察し、現地の起業家・学生と交流する。</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="date">フェーズ2</div>
-                    <div class="content">
-                        <h3>学びの発信と振り返り</h3>
-                        <p>韓国での体験をSNS・ブログで発信。帰国後の余市での活動に活かすためのレポートをまとめる。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 出場予定の大会 -->
+        <!-- ===== 出場予定の大会 ===== -->
         <section id="contests" class="glass-section slide-up">
             <h2>出場検討中の大会</h2>
             <div class="contest-list">
@@ -195,20 +343,6 @@
             </div>
         </section>
 
-        <!-- 関連資料 -->
-        <section id="resources" class="glass-section slide-up">
-            <h2>関連資料</h2>
-            <div class="resource-links">
-                <a href="https://canva.link/s3f0l6n9qiiuv7u" target="_blank" class="resource-card">
-                    <span class="resource-icon">🇰🇷</span>
-                    <span class="resource-text">韓国自主研修詳細</span>
-                </a>
-                <a href="https://canva.link/0d0fmazeavly0o3" target="_blank" class="resource-card">
-                    <span class="resource-icon">📊</span>
-                    <span class="resource-text">事業計画書</span>
-                </a>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -217,14 +351,18 @@
     </footer>
 
     <script>
+        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.slide-up').forEach((el) => observer.observe(el));
+        document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
     </script>
 </body>
 </html>
